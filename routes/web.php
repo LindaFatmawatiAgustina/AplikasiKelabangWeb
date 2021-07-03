@@ -28,7 +28,8 @@ Route::group(['middleware' => ['dinaspu','auth']],function(){
 	Route::get('/laporan/{id}','PelaporanController@detail_laporan')->name('detail_laporan');
 
 	Route::get('/tindak_lanjut/{id}','PelaporanController@edit_laporan_tindak_lanjut')->name('edit_tindak_lanjut');
-		Route::post('/tindak_lanjut/{id}','PelaporanController@update_laporan_tindak_lanjut')->name('update_tindak_lanjut');
+	Route::post('/tindak_lanjut/{id}','PelaporanController@update_laporan_tindak_lanjut')->name('update_tindak_lanjut');
+	Route::post('/laporan/{id}','PelaporanController@update_laporan')->name('update_laporan');
 	Route::get('/hapuslaporan/{id}','PelaporanController@hapus_laporan')->name('hapus_laporan');
 	;
 	

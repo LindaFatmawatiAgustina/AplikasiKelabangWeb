@@ -40,7 +40,8 @@
                                  <select name="status" type="text" class="form-control">
 
                                     <option value="" selected disabled>Pilih Status Laporan</option>
-                                    <option value="belumdiperbaiki" @if($status == 'belumdiperbaiki') {{'selected="selected"'}} @endif >Belum Perbaikan</option>
+                                     <option value="" @if($status == '') {{'selected="selected"'}} @endif >Semua</option>
+                                <!--     <option value="belumdiperbaiki" @if($status == 'belumdiperbaiki') {{'selected="selected"'}} @endif >Belum Perbaikan</option> -->
                                     <option value="diperbaiki" @if($status == 'diperbaiki') {{'selected="selected"'}} @endif >Diperbaiki</option>
                                     <option value="selesai" @if($status == 'selesai') {{'selected="selected"'}} @endif >Selesai</option>
                                
@@ -96,10 +97,10 @@
                           <button class="btn btn-warning">Detail</button></a>
 
                        <!--  <a href=""><button class="btn btn-success">Edit</button></a> -->
-                    <a   href="" data-toggle="modal" data-target="#logoutModal" href="{{route('hapus_laporan',$lapor->id)}}">
+                    <a   href="" data-toggle="modal" data-target="#logoutModals" href="{{route('hapus_laporan',$lapor->id)}}">
                       <button class="btn btn-danger"><i class="fas fa-trash"></i></button></a>
 
-                  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal fade" id="logoutModals" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                           <div class="modal-header">

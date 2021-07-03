@@ -37,7 +37,7 @@ class PelaporanApiController extends Controller
 		'nama_jalan' => $request->input('nama_jalan'),
 		'latitude' => $request->input('latitude'),
 		'longitude' => $request->input('longitude'),
-		'status' => 'belum',
+		'status' => 'Laporan',
     'tanggal_laporan'=> Carbon::now(),
 		'user_id' =>  $user->id,
 
@@ -70,9 +70,9 @@ class PelaporanApiController extends Controller
 	}
 	public function ReadLaporanJalan($id){
 	
-	  $pelaporan = Pelaporan::where('user_id',$id)->get();
+	  $pelaporan = Pelaporan::where('user_id',$id)->orderBy('id','desc')->get();
     // $tindaklanjut = TindakLanjut::where('id_pelaporans',$pelaporan->id)->get();
-	  return response()->json($pelaporan);
+	  return response()->json([ 'data' =>$pelaporan]);
 
 	}
 

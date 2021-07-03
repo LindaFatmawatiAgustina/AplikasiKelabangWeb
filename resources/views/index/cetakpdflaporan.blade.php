@@ -69,7 +69,7 @@
                 <td class="text-center">{{$key->status}}</td>
                 <td class="text-center">{{$key->nilai_kedalaman}}</td>
                 <td class="text-center">{{date("d-m-Y", strtotime($key->tanggal_laporan))}}</td>
-                <td class="text-center">{{date("d-m-Y", strtotime($key->tanggal))}}</td>
+                <td class="text-center">{{($key->tanggal)}}</td>
 
               </tr>
 

@@ -32,7 +32,7 @@
     <script type="text/javascript">
 
         //Memasukkan data tabel tempat sampah ke array
-        array.push(['<?php echo $tempatsampahs->nama?>','<?php echo $tempatsampahs->latitude?>','<?php echo $tempatsampahs->longitude?>','<?php echo $tempatsampahs->status?>','<?php echo $tempatsampahs->file_gambar ?>']);
+        array.push(['<?php echo $tempatsampahs->nama_jalan?>','<?php echo $tempatsampahs->latitude?>','<?php echo $tempatsampahs->longitude?>','<?php echo $tempatsampahs->status?>','<?php echo $tempatsampahs->file_gambar ?>']);
 
     </script> 
 
