@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-  
+
 Auth::routes(['verify' => true]);
 
 Route::group(['middleware' => ['dinaspu','auth']],function(){
@@ -34,7 +34,6 @@ Route::group(['middleware' => ['dinaspu','auth']],function(){
 	;
 	
 	
-
 
 });
 

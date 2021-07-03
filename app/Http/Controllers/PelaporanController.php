@@ -7,14 +7,20 @@ use App\Pelaporan;
 use App\User;
 use App\TindakLanjut;
 use Alert;
+<<<<<<< HEAD
 use DB;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\File;
+=======
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
+>>>>>>> a4c47b3706486b4dda1f1ce28cf7b555433f8811
 use PDF;
 
 class PelaporanController extends Controller
 {
+<<<<<<< HEAD
   //
 
   public function maps_belum_perbaikan()
@@ -319,4 +325,26 @@ class PelaporanController extends Controller
     return $pdf->stream();
     return view('index.cetakpdflaporan', compact('data', 'datas'));
   }
+=======
+    //
+
+    public function maps_belum_perbaikan(){
+
+    	$pelaporan = Pelaporan::where('status','diperbaiki')->with('User')->get();
+        $user=User::all();
+
+    	return view('index.maps_belum_perbaikan',compact('pelaporan','user'));
+
+    }
+     public function maps_selesai_perbaikan(){
+
+        $pelaporan = Pelaporan::where('status','selesai')->get();
+
+        return view('index.maps_selesai_perbaikan',compact('pelaporan'));
+    }
+
+  
+
+
+>>>>>>> a4c47b3706486b4dda1f1ce28cf7b555433f8811
 }

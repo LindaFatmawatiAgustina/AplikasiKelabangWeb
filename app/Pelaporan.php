@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pelaporan extends Model
 {
     //
+
 	protected $table = 'pelaporans';
 
 	protected $fillable = [
@@ -20,4 +21,8 @@ class Pelaporan extends Model
 		return $this->belongsTo('App\User','user_id','id');
 	}
 	
+
+
+
+
 }

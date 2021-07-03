@@ -6462,7 +6462,10 @@ button.bg-light:focus {
 
 .bg-dark {
   background-color: #5a5c69 !important;
+<<<<<<< HEAD
   background-image: linear-gradient(342deg,#fff 5%,#fff 100%);
+=======
+>>>>>>> a4c47b3706486b4dda1f1ce28cf7b555433f8811
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -6473,7 +6476,10 @@ button.bg-dark:focus {
 
 .bg-white {
   background-color: #fff !important;
+<<<<<<< HEAD
   background-image: linear-gradient(198deg,#f9f9f9 10%,#0000003b 100%);
+=======
+>>>>>>> a4c47b3706486b4dda1f1ce28cf7b555433f8811
 }
 
 .bg-transparent {
@@ -9876,8 +9882,13 @@ a:focus {
 }
 
 .bg-gradient-primary {
+<<<<<<< HEAD
   background-color: #a9a9a9;
   background-image: linear-gradient(180deg,#cfcfcf 10%,#343a40 100%);
+=======
+  background-color: #4e73df;
+  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+>>>>>>> a4c47b3706486b4dda1f1ce28cf7b555433f8811
   background-size: cover;
 }
 
@@ -9992,7 +10003,11 @@ a:focus {
 }
 
 .text-gray-600 {
+<<<<<<< HEAD
   color: #616161 !important;
+=======
+  color: #858796 !important;
+>>>>>>> a4c47b3706486b4dda1f1ce28cf7b555433f8811
 }
 
 .text-gray-700 {
@@ -11211,7 +11226,11 @@ form.user .btn-user {
 }
 
 footer.sticky-footer {
+<<<<<<< HEAD
   padding: 1rem 0;
+=======
+  padding: 2rem 0;
+>>>>>>> a4c47b3706486b4dda1f1ce28cf7b555433f8811
   flex-shrink: 0;
 }
 

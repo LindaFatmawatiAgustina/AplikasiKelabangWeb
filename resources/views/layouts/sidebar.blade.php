@@ -12,15 +12,27 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
+<<<<<<< HEAD
         <a class="nav-link" href="{{route('maps')}}">
        <i class="fa fa-home" aria-hidden="true"></i>
+=======
+      <!--   <a class="nav-link" href="{{route('maps')}}"> -->
+           <a class="nav-link" href="">
+     <!--   <i class="fa fa-home" aria-hidden="true"></i> -->
+>>>>>>> a4c47b3706486b4dda1f1ce28cf7b555433f8811
 
             <span>Beranda</span></a>
     </li>
   <li class="nav-item active">
+<<<<<<< HEAD
         <a class="nav-link" href="{{route('pelaporan')}}">
        <i class="fa fa-print" aria-hidden="true"></i>
 
+=======
+      <!--   <a class="nav-link" href="{{route('pelaporan')}}"> -->
+          <a class="nav-link" href="">
+<!--    <i class="fa fa-envelope-open-o" aria-hidden="true"></i> -->
+>>>>>>> a4c47b3706486b4dda1f1ce28cf7b555433f8811
 
             <span>Laporan Perbaikan</span></a>
     </li>
@@ -28,8 +40,15 @@
 
 
          <li class="nav-item active">
+<<<<<<< HEAD
         <a class="nav-link" href="{{route('maps_selesai')}}">
        <i class="fa fa-road" aria-hidden="true"></i>
+=======
+       <!--  <a class="nav-link" href="{{route('maps_selesai')}}"> -->
+         <a class="nav-link" href="">
+      <!--  <i class="fa fa-map" aria-hidden="true"></i> -->
+    
+>>>>>>> a4c47b3706486b4dda1f1ce28cf7b555433f8811
 
             <span>Jalan Selesai Perbaikan</span></a>
     </li>

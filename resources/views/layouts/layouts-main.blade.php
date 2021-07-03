@@ -22,18 +22,30 @@
 </head>
 <style>
   body {
+<<<<<<< HEAD
     background-color: #a9a9a9 
+=======
+    background-color: #6777ef; 
+>>>>>>> a4c47b3706486b4dda1f1ce28cf7b555433f8811
     -webkit-animation: color 12s ease-in  0s infinite alternate running;
     -moz-animation: color 12s linear  0s infinite alternate running;
     animation: color 12s linear  0s infinite alternate running;
     }
 
     @-webkit-keyframes color {
+<<<<<<< HEAD
          0% { background-color: #a9a9a9; }
         25% { background-color: #a9a9a9; }
         55% { background-color: #D6D2C4; }
         75% { background-color: #D6D2C4; } 
         100% { background-color: #a9a9a9; }
+=======
+        0% { background-color: #6777ef; }
+        25% { background-color: #67b7ef; }
+        55% { background-color: #2855a7; }
+        75% { background-color: #07a3ff; }
+        100% { background-color: #2163f7f2; }
+>>>>>>> a4c47b3706486b4dda1f1ce28cf7b555433f8811
     }
   }
 </style>
