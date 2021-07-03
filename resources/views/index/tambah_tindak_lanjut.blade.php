@@ -10,25 +10,35 @@
 
 
 @section('konten')
-<div class="col-md-12 col-xs">
-  <a href="{{ route('pelaporan')}} "><button class="btn btn-primary">kembali</button></a>
-  <div class="row">
+
+<div class="kembali">
+  <a href="{{ route('pelaporan')}} "><button class="btn btn-primary" >kembali</button></a>
+</div>
+
+<center><h2 class="card-title">Update Laporan Tindak Lanjut</h2></center>
+<div class="row col-md-12 col-xs jarak ">
 
 
+  <div class="card-body col-md-4 col-xs" >
+    <img alt="image" src="{{asset('asset-template/img/'.$update->file_gambar)}}" height="350dp" width="350dp">
+  </div>
+  <div class="card-body col-md-4 col-xs" >
+    <img alt="image" src="{{asset('asset-template/img/'.$update->file_gambar2)}}" height="350dp" width="350dp">
+  </div>
+  <div class="card-body col-md-4 col-xs" >
+    <img alt="image" src="{{asset('asset-template/img/'.$update->file_gambar3)}}" height="350dp" width="350dp">
+  </div>
+</div>
+<div class="card-body col-md-7 col-xs imgtindaklanjut">
 
-    <div class="card-body col-md-4 col-xs" >
-      <img alt="image" src="{{asset('asset-template/img/'.$update->file_gambar)}}" height="350dp" width="350dp">
-    </div>
-    <div class="card-body col-md-7 col-xs imgtindaklanjut">
+  <form method="post" action="{{route('update_tindak_lanjut',$update->id)}}" enctype="multipart/form-data">
+   
+    {{csrf_field()}}
 
-      <form method="post" action="{{route('update_tindak_lanjut',$update->id)}}" enctype="multipart/form-data">
-        <div class="row">
+    <div class="col-xl-12 col-md-8 col-12 mb-1">
+      
 
-          {{csrf_field()}}
 
-          <div class="col-xl-12 col-md-8 col-12 mb-1">
-
-            <h2 class="card-title">Update Laporan Tindak Lanjut</h2>
 <!--  <div class="form-group">
 
 <input type="text" class="form-control" id="id" name="id" placeholder="" disabled value="{{$update->id}}" required=""/>
@@ -105,14 +115,11 @@
 @endif
 
 
-</div>
 
 
 </div>  
 </form> 
 
-</div>
-</div>
 </div>
 
 

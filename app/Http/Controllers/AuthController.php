@@ -9,7 +9,7 @@ use Auth;
 
 class AuthController extends Controller
 {
-   
+ 
     public function login(){
 
     	return view('auth.login');
@@ -21,10 +21,11 @@ class AuthController extends Controller
 
     	return view('auth.register');
     }
+    
 
     public function postregister(Request $request)
     {
-            $this->validate($request,[
+        $this->validate($request,[
             'nama' => 'required|unique:users,nama',
             'email'    => 'required',
             'password' => 'required | min:6',
@@ -39,7 +40,7 @@ class AuthController extends Controller
 
         User::create($data);
         alert()->success('Selamat Berhasil Membuat Akun', 'Silahkan Login disini');
-            return redirect()->route('login');
+        return redirect()->route('login');
     }
 
 
@@ -48,20 +49,20 @@ class AuthController extends Controller
         if(Auth::attempt($request->only('email','password'))){
             
             if(auth()->user()->role == 'dinaspu'){
-            alert()->success('Selamat Berhasil Login', 'Halo Selamat Datang');
+                alert()->success('Selamat Berhasil Login', 'Halo Selamat Datang');
                 return redirect()->route('maps');
             } elseif (auth()->user()->role == 'admin') {
-            alert()->success('Selamat Berhasil Login', 'Halo Selamat Datang');
+                alert()->success('Selamat Berhasil Login', 'Halo Selamat Datang');
 
-               return redirect()->route('homes');
+                return redirect()->route('homes');
             }    
-          
+            
         }
-       alert()->error('Akun tidak ditemukan','Gagal');
+        alert()->error('Akun tidak ditemukan','Gagal');
         return redirect('login');
     }
 
-     public function logout(){
+    public function logout(){
         
         //jika logout maka akan diarahkan ke halaman login..
         auth()->logout();

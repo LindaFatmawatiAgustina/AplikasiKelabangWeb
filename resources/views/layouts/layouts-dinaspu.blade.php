@@ -51,6 +51,18 @@
 
       margin-top: 300px;
     }
+    .kembali {
+      margin-left: 20px;
+
+    }
+    .jarak {
+      /*margin: 10px 10px 10px 10px;*/
+      margin-left: : 8px;
+
+
+
+    }
+
     table tr td,
     table tr th {
       font-size: 11pt;
@@ -172,7 +184,7 @@
         });
 
         var infoWindow = new google.maps.InfoWindow(),
-          marker, i;
+        marker, i;
 
         for (var i = 0; i < array.length; i++) {
 
@@ -193,12 +205,16 @@
             return function() {
 
               var infoWindowContent =
-                '<div class="content"><p>' +
-                '<h6>' + array[i][0] + '</h6>' +
-                '<img height="130" style="margin:0 auto; display:block;" src="asset-template/img/' + array[i][4] + '"/><br/>' +
-                'Status : ' + array[i][3] + '<br/>' +
-                'Titik Koordinat : ' + array[i][1] + ', ' + array[i][2] + '<br/>' +
-                '</p></div>';
+              '<div class="content"><p>' +
+              '<h6>' + array[i][0] + '</h6>' +
+              'Status : ' + array[i][3] + '<br/>' +
+              'Titik Koordinat : ' + array[i][1] + ', ' + array[i][2] + '<br/>' +
+              '<img height="130" style="margin:0 auto; display:block;" src="asset-template/img/' + array[i][6] + '"/><br/>' +
+              '<img height="130" style="margin:0 auto; display:block;" src="asset-template/img/' + array[i][5] + '"/><br/>'+
+              '<img height="130" style="margin:0 auto; display:block;" src="asset-template/img/' + array[i][4] + '"/><br/>' +
+
+
+              '</p></div>';
 
               infoWindow.setContent(infoWindowContent);
 
@@ -229,6 +245,6 @@
 
 
     @include('sweet::alert')
-</body>
+  </body>
 
-</html>
+  </html>

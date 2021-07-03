@@ -10,25 +10,32 @@
 
 
 @section('konten')
-<div class="col-md-12 col-xs">
+
+<div class="kembali">
  <a href="{{ route('pelaporan')}} "><button class="btn btn-warning">kembali</button></a>
+</div>
 
- <div class="row">
-
-
+<div class="row col-md-12 col-xs jarak ">
 
   <div class="card-body col-md-4 col-xs" >
     <img alt="image" src="{{asset('asset-template/img/'.$update->file_gambar)}}" height="350dp" width="350dp">
   </div>
-  <div class="card-body col-md-7 col-xs imgtindaklanjut">
+  <div class="card-body col-md-4 col-xs" >
+    <img alt="image" src="{{asset('asset-template/img/'.$update->file_gambar2)}}" height="350dp" width="350dp">
+  </div>
+  <div class="card-body col-md-4 col-xs" >
+    <img alt="image" src="{{asset('asset-template/img/'.$update->file_gambar3)}}" height="350dp" width="350dp">
+  </div>
+</div>
+<div class="card-body col-md-7 col-xs imgtindaklanjut">
 
-   <form method="post" action="{{route('update_laporan',$update->id)}}" enctype="multipart/form-data">
-    <div class="row">
+ <form method="post" action="{{route('update_laporan',$update->id)}}" enctype="multipart/form-data">
 
-      {{csrf_field()}}
 
-      <div class="col-xl-12 col-md-8 col-12 mb-1">
-        <h3><label> Detail Laporan Data Kelola Jalan Berlubang</label></h3>
+  {{csrf_field()}}
+
+  <div class="col-xl-12 col-md-8 col-12 mb-1">
+    <h3><label> Detail Laporan Data Kelola Jalan Berlubang</label></h3>
 
                             <!--  <div class="form-group">
 
@@ -109,20 +116,16 @@
 
 
                                 </div>
-
-                              </div>
-
+                              </form>
 
                             </div>
-                          </form>
-
-                        </div>
-                      </div>
-                    </div>
 
 
-                    @endsection
 
-                    @section('footer')
-                    @include('layouts.footer')
-                    @endsection
+
+
+                            @endsection
+
+                            @section('footer')
+                            @include('layouts.footer')
+                            @endsection

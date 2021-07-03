@@ -10,6 +10,7 @@ use Alert;
 use DB;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\File;
 use PDF;
 
 class PelaporanController extends Controller
@@ -293,6 +294,7 @@ class PelaporanController extends Controller
       # code...
 
       $tindak_lanjut->delete();
+      // File::delete('asset-template/img/' . $update->file_gambar);
     }
 
 

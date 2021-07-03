@@ -17,7 +17,7 @@ class PelaporanApiController extends Controller
    
     // dd($file);
     // $nama_file = time() . ".jpeg";
- 
+   
     // $tujuan_upload = public_path() . '/pelaporan/';
 
     // if (file_put_contents($tujuan_upload . $nama_file, base64_decode($file))) {
@@ -34,46 +34,62 @@ class PelaporanApiController extends Controller
 
     $data=[
 		// 'file_gambar' => $nama_file,
-		'nama_jalan' => $request->input('nama_jalan'),
-		'latitude' => $request->input('latitude'),
-		'longitude' => $request->input('longitude'),
-		'status' => 'Laporan',
-    'tanggal_laporan'=> Carbon::now(),
-		'user_id' =>  $user->id,
+      'nama_jalan' => $request->input('nama_jalan'),
+      'latitude' => $request->input('latitude'),
+      'longitude' => $request->input('longitude'),
+      'status' => 'Laporan',
+      'tanggal_laporan'=> Carbon::now(),
+      'user_id' =>  $user->id,
 
     ];
 
     if ($request->file_gambar) {
-       $file = $request->file_gambar;
-      $nama_file = "Pelaporan_" . time() . ".jpeg";
-      $tujuan_upload = public_path() . '/asset-template/img/';
-        if (file_put_contents($tujuan_upload . $nama_file, base64_decode($file))) {
-          $data ['file_gambar'] = $nama_file;
-        }
-      }
+     $file = $request->file_gambar;
+     $nama_file = "Pelaporan_" . time() . ".jpeg";
+     $tujuan_upload = public_path() . '/asset-template/img/';
+     if (file_put_contents($tujuan_upload . $nama_file, base64_decode($file))) {
+      $data ['file_gambar'] = $nama_file;
+    }
+  }
+  if ($request->file_gambar2) {
+   $file = $request->file_gambar2;
+   $nama_file = "Pelaporan_" . time() . ".jpeg";
+   $tujuan_upload = public_path() . '/asset-template/img/';
+   if (file_put_contents($tujuan_upload . $nama_file, base64_decode($file))) {
+    $data ['file_gambar2'] = $nama_file;
+  }
+}
+if ($request->file_gambar3) {
+ $file = $request->file_gambar3;
+ $nama_file = "Pelaporan_" . time() . ".jpeg";
+ $tujuan_upload = public_path() . '/asset-template/img/';
+ if (file_put_contents($tujuan_upload . $nama_file, base64_decode($file))) {
+  $data ['file_gambar3'] = $nama_file;
+}
+}
 
-      if (Pelaporan::create($data)) {
-        return response()->json([
-          "message" => "success"
-        ], Response::HTTP_CREATED);
-      } else {
-        return response()->json([
-          "message" => "failed",
-        ], Response::HTTP_BAD_REQUEST);
-      }
+if (Pelaporan::create($data)) {
+  return response()->json([
+    "message" => "success"
+  ], Response::HTTP_CREATED);
+} else {
+  return response()->json([
+    "message" => "failed",
+  ], Response::HTTP_BAD_REQUEST);
+}
 
 
 
 
     // return response()->json($response);
 
-	}
-	public function ReadLaporanJalan($id){
+}
+public function ReadLaporanJalan($id){
 	
-	  $pelaporan = Pelaporan::where('user_id',$id)->orderBy('id','desc')->get();
+ $pelaporan = Pelaporan::where('user_id',$id)->orderBy('id','desc')->get();
     // $tindaklanjut = TindakLanjut::where('id_pelaporans',$pelaporan->id)->get();
-	  return response()->json([ 'data' =>$pelaporan]);
+ return response()->json([ 'data' =>$pelaporan]);
 
-	}
+}
 
 }
