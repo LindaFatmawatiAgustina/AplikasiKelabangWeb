@@ -49,8 +49,8 @@
                 <th class="text-center">Longitude</th>
                 <th class="text-center">Status</th>
                 <th class="text-center">Nilai Kedalaman</th>
-                 <th class="text-center">Tanggal Dilaporkan</th>
-                <th class="text-center">Tanggal Perbaikan</th>
+                <th class="text-center">Tanggal Dilaporkan</th>
+                <th class="text-center">Tanggal Selesai</th>
 
               </tr>
             </thead>
@@ -90,16 +90,16 @@
     </div>
   </div>
 
-  </tbody>
-  </table>
+</tbody>
+</table>
 
-  <script type="text/javascript">
-    window.print();
+<script type="text/javascript">
+  window.print();
 
-    window.onafterprint = function() {
-      alert("Prose Printing Selesai...");
-    }
-  </script>
+  window.onafterprint = function() {
+    alert("Prose Printing Selesai...");
+  }
+</script>
 </body>
 
 </html>
